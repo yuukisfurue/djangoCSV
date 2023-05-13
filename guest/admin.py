@@ -1,6 +1,7 @@
 from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportActionModelAdmin
+from import_export.admin import ImportExportMixin
 from import_export.formats import base_formats
 from guest.models import Guest
 
@@ -12,9 +13,8 @@ class GuestResource(resources.ModelResource):
     fields = ['id','name','prefecture','gender','employmentstatus','company','jyob','stay','affiliation','postion','annual','lastyear']
     import_id_fields = ['id']
 
-class GuestAdmin(ImportExportActionModelAdmin):
+class GuestAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = (
-        'id',
         'name',
         'prefecture',
         'gender',
