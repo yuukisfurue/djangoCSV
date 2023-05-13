@@ -15,6 +15,7 @@ class GuestResource(resources.ModelResource):
 
 class GuestAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = (
+        'id',
         'name',
         'prefecture',
         'gender',

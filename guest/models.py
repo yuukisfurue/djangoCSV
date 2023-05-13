@@ -6,6 +6,7 @@ import csv
 
 # Create your models here.
 class Guest(models.Model):
+    id = models.AutoField(primary_key=True) 
     name = models.CharField(max_length=100)
     prefecture  = models.CharField(verbose_name="出身地",choices=settings.PREFECTURES,max_length=100)
     gender  = models.CharField(verbose_name="性別",choices=settings.GENDERS,max_length=100)
@@ -22,7 +23,8 @@ class Guest(models.Model):
         return '<Guest:id=' + str(self.id) + ', ' + \
             self.name + '(' + str(self.name) + ')>'
     
-class Plofile(models.Model):            
+class Plofile(models.Model):     
+    id = models.AutoField(primary_key=True)       
     name = models.CharField(verbose_name="名前",max_length=100)
     prefecture  = models.CharField(verbose_name="出身地",choices=settings.PREFECTURES,max_length=100)
     gender  = models.CharField(verbose_name="性別",choices=settings.GENDERS,max_length=100)
