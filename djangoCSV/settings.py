@@ -21,6 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-pqnm7u!%0qem2$qfccigjl9d_ko%i@l4^1^2=1ewo)(&#o!d%3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'import_export',
-    'guest', #☆
+    'guest', 
+    'board',
 ]
 
 MIDDLEWARE = [
@@ -326,3 +328,14 @@ LASTYEARS = [
      ( "750" ,"750" ), 
      ( "800" ,"800" ), 
 ]
+
+# Django3の時のredisの設定
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://redis:6379', # ここを変える
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient'
+        }
+    }
+}
