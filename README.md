@@ -1,8 +1,10 @@
 
 #djangocsv/board 
 (入力は全てプルダウンメニューを利用)
-下記ご参照願います。
+下記１３４目からご参照願います。
 https://github.com/yuukisfurue/djangoCSV/blob/master/djangoCSV/settings.py
+
+vps運用で公開運用予定のため、redisを採用しております。
 
 models.py
 #下記はCSVのエクスポートのみ実装
