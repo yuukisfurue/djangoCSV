@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["*"] 
+STATIC_ROOT =  os.path.join(BASE_DIR, 'static')
 
 # Application definition
 
@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'admindjango',
-        'USER': 'furueyuuki',
-        'PASSWORD': '769Yuvua@_ho9088Ok58765',
+        'USER': 'yuuki7771',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -130,6 +130,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 PREFECTURES = [ 
     ("北海道"  ,"北海道"  ),  
