@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django.core.validators import MinLengthValidator  #☆
+from django.core.validators import MinLengthValidator  
 
 class Member(models.Model):
     name = models.CharField(verbose_name="名前",max_length=100)
