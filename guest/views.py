@@ -26,7 +26,7 @@ def index(request, num=1):
 
 def csv_export(request):
 	filename='export.csv'
-	response = HttpResponse(content_type='text/csv;charset=utf_8_sig')
+	response = HttpsResponse(content_type='text/csv;charset=utf_8_sig')
 	response['Content-Disposition'] = "attachment;  filename='{}'; filename*=UTF-8''{}".format(filename, filename)
 
 	w = csv.writer(response)
