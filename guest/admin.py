@@ -31,7 +31,7 @@ class GuestAdmin(ImportExportMixin, admin.ModelAdmin):
 
     resource_class = GuestResource
     formats = [base_formats.CSV]
-
+#下記ページネーターの設定
     list_display = ('id','name','prefecture','gender','employmentstatus','company','jyob','stay','affiliation','postion','annual','lastyear')
     list_per_page = 10 # No of records per page 
 
