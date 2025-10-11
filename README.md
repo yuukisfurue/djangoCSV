@@ -1,8 +1,8 @@
 
 #djangocsv/board 
 (入力は全てプルダウンメニューを利用)
-下記１３４目からご参照願います。
-https://github.com/yuukisfurue/djangoCSV/blob/master/djangoCSV/settings.py
+下記Qiitaより記載方法のご参照願います。
+[https://github.com/yuukisfurue/djangoCSV/blob/master/djangoCSV/settings.py](https://qiita.com/yuuki-furue/items/9c715d04144b65926b9e)
 
 vps運用で公開運用予定のため、redisを採用しております。
 
